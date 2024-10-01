@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonCoffee</title>
+    <link rel="icon" type="image/png" href="assets/images/Coffee and moon logo with love template.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-image: url(assets/images/background\ coffee.png);
+            background-color: #d7d8daf1;
+
+
+
+        }
+
+        header {
+            background-color: #1e201eb6;
+            backdrop-filter: blur(10px);
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            border-bottom: 2px solid #d7d8daf1;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #ECDFCC;
+            max-height: 60px;
+            padding: 20px 0;
+        }
+
+
+        .logo a {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo>a>img {
+            width: 6em;
+        }
+
+        .logo a p {
+            font-size: 20px;
+        }
+
+        nav a {
+            color: #ECDFCC;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .cart a {
+            font-size: small;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            padding: 0 10px;
+        }
+
+        nav ul li {
+            margin: 10px;
+        }
+
+        nav ul li a {
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #ECDFCC;
+            color: #FF6600;
+            transition: 300ms ease-in-out;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px;
+            background-color: #d7d8daf1;
+
+        }
+
+        #home .pic-coffee {
+            width: 30em;
+            filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+
+        }
+
+        #home .home-text h1 {
+            font-size: 60px;
+            max-width: 10em;
+
+        }
+
+        #home .home-text p {
+            font-weight: bold;
+        }
+
+        #home button,
+        #about button {
+            background-color: #FF6600;
+            color: #ECDFCC;
+            border: transparent;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 20px;
+        }
+
+        #about {
+            background-color: #1b1b1dfa;
+            color: #ECDFCC;
+            padding: 50px 50px 0 50px;
+        }
+
+        #about .badges {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        #about .badges img {
+            background-color: #d7d8da42;
+            width: 50px;
+            height: auto;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #about .badges div {
+            font-size: 15px;
+            width: 200px;
+        }
+
+        h4,
+        h4~p {
+            margin: 5px;
+        }
+
+        .badges div>p {
+            font-size: 12px;
+        }
+
+        .content-about {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 80px;
+        }
+
+        .content-about div>img {
+            height: 350px;
+            width: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .content-about .description {
+            width: 500px;
+            font-size: 20px;
+        }
+
+        .content-about .description p {
+            font-size: 15px;
+        }
+
+        .content-about .description button {
+            margin: 40px 0;
+        }
+
+        #coffee, #menu, #news {
+            background-color: #1b1b1dfa;
+            color: #1b1b1dfa;
+            padding: 20px;
+        }
+
+        #coffee h1, #menu h1 {
+            text-align: center;
+            color: #ECDFCC;
+            margin: 0;
+        }
+
+        .card-coffee ,.card-menu {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 50px;
+
+        }
+
+        .card-coffee .card, .card-menu .card {
+            height: auto;
+            width: 300px;
+            background-color: #ECDFCC;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .card-coffee .card img, .card-menu .card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+            margin-bottom: 40px;
+        }
+
+        .card-coffee>button, .card-menu>button {
+            border: none;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            color: #FF6600;
+            font-weight: 600;
+        }
+
+        .card-coffee .description p, .card-menu .description p{
+            font-size: 15px;
+        }
+
+        .card-coffee .description .price,.card-menu .description .price {
+            font-weight: 600;
+            font-size: 30px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-coffee .description .price button, .card-menu .description .price button {
+            background-color: #FF6600;
+            color: #ECDFCC;
+            border: transparent;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 15px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 2px solid #968f84;
+            width: 1000px;
+        }
+
+        .nav-menu ul li a {
+            color: #968f84;
+            text-decoration: none;
+            padding: 8px 5px 0 5px;
+            border-radius: 5px 5px 0 0;
+            padding-bottom: 0;
+        }
+
+        .nav-menu ul li {
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-menu ul li a:hover {
+            background-color: #FF6600;
+            color: #ECDFCC;
+            transition: 200ms ease-in-out;
+        }
+
+        #news>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #news div img {
+            border-radius: 10px;
+            width: 1020px;
+            height: 500px;
+            object-fit: cover;
+            object-position: 100% 90%;
+        }
+
+        #news>div>div {
+            position:absolute;
+            left: 200px;
+            font-size: 25px;
+            width: 500px;
+            text-align: center;
+            padding: 10px;
+            color:#ECDFCC ;
+        }
+        #news>div>div>div {
+            display: flex;
+            align-items: center;
+        }
+        #news>div>div>div input {
+            background-color: #1b1b1dfa;
+            color: #ECDFCC;
+            height: 50px;
+            width: 100%;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+        }
+
+        #news>div>div button {
+            background-color: #FF6600;
+            border-radius: 0 10px 10px 0;
+            height: 50px;
+            width: 30%;
+            padding: 10px;
+            color: #ECDFCC;
+            font-weight: 600;
+            font-size: 15px;
+            border: 5px solid #1b1b1dfa;
+            border-left: none;
+            position: absolute;
+            right: 10px;
+        }
+
+        footer {
+            background-image: url(assets/images/download\ \(3\).jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        footer>div, footer>p {
+            background-color: #1b1b1d96;
+            color: #ECDFCC;
+        }
+
+        footer> p {
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+        }
+
+        footer .logo {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+            height: 100px;
+            width: 50px;
+        }
+        footer .logo img{
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        footer .logo+div>p {
+            margin: 0;
+            padding: 0;
+        }
+
+        footer>div {
+            padding: 50px;
+            display: flex;
+            align-items: flex-start;
+            justify-content:space-evenly;
+            border-bottom: 2px solid #968f84;
+            
+        }
+
+        footer>div>div {
+            width: 200px;
+            height: 120px;
+        }
+
+        .viewer-guides{
+            display: flex;
+            flex-direction: column;
+        }
+        .viewer-guides a{
+            text-decoration: none;
+            color: #ECDFCC;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home">
+                    <img src="assets/images/logo.png" alt="logo">
+                    <p>MoonCoffee</p>
+                </a>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#coffee">Coffee</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#news">News</a></li>
+            </ul>
+            <div class="cart"><a href="">Cart <span>0</span></a></div>
+        </nav>
+    </header>
+    <main>
+        <div id="home">
+            <div class="home-text">
+                <h1>Good Coffee Will Always Find The Audience</h1>
+                <p>We provide a variety of unique and best coffees</p>
+                <button>Order Now</button>
+            </div>
+            <div class="pic-coffee">
+                <img src="assets/images/secangkir kopi.png" alt="coffee">
+            </div>
+        </div>
+
+        <div id="about">
+            <div class="badges">
+                <div>
+                    <img width="64" height="64" src="https://img.icons8.com/hatch/64/FFFFFF/espresso-cup.png"
+                        alt="espresso-cup" />
+                    <h4>AWESOME AROMA</h4>
+                    <P>The coffee is brewed by first roasting the green coffee beans</P>
+                </div>
+                <div>
+                    <img width="80" height="80" src="https://img.icons8.com/dotty/80/FFFFFF/guarantee.png"
+                        alt="guarantee" />
+                    <h4>HIGHT QUALITY</h4>
+                    <P>The coffee is brewed by first roasting the green coffee beans</P>
+                </div>
+                <div>
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/coffee-beans-.png"
+                        alt="coffee-beans-" />
+                    <h4>PURE GRADES</h4>
+                    <P>The coffee is brewed by first roasting the green coffee beans</P>
+                </div>
+                <div>
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/coffee-bag.png"
+                        alt="coffee-bag" />
+                    <h4>PROPER ROASTING</h4>
+                    <P>The coffee is brewed by first roasting the green coffee beans</P>
+                </div>
+            </div>
+
+            <div class="content-about">
+                <div class="img">
+                    <img src="https://i.pinimg.com/564x/38/25/0e/38250e1d24fb3813c0c0a85e766135c3.jpg" alt="coffee">
+                </div>
+                <div class="description">
+                    <h1>Best Coffee House In Your Home Town</h1>
+                    <p>Our incredibly rate come from humble beginnings in yemen, where decades of political turmoil once
+                        forced local farmers to start growing khat, a narcotic native tothe Arabian peninsula.
+                    </p>
+                    <p>The Dawoodi Bohara Community change this, removing all the khat plants and replacing them with
+                        coffee, bringing this humble brew black to its roots.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="coffee">
+            <h1>Our Special Coffee</h1>
+            <div class="card-coffee">
+                <button><-</button>
+                        <div class="card">
+                            <img src="assets/images/Paper_Coffee_Bag_Psd_Mock_Up_Template_Download_on_Pngtree-removebg-preview.png" alt="">
+
+                            <div class="description">
+                                <h4>Americano Pure Grades</h4>
+                                <p>The coffee is brewed by first roasting the green coffee beans.</p>
+                                <div class="price">
+                                    <span>$25</span>
+                                    <button>Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/Kraft_Food_Bag_Mockup_-_Half_Side_View_-_Free_Download_Images_High_Quality_PNG__JPG_-_71172-removebg-preview.png" alt="">
+                            
+                            <div class="description">
+                                <h4>Americano Pure Grades</h4>
+                                <p>The coffee is brewed by first roasting the green coffee beans.</p>
+                                <div class="price">
+                                    <span>$30</span>
+                                    <button>Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/Kraft_Coffee_Bag_Mockup_-_Free_Download_Images_High_Quality_PNG__JPG_-_109146-removebg-preview.png" alt="">
+
+                            <div class="description">
+                                <h4>Americano Pure Grades</h4>
+                                <p>The coffee is brewed by first roasting the green coffee beans.</p>
+                                <div class="price">
+                                    <span>$30</span>
+                                    <button>Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button>-></button>
+            </div>
+        </div>
+
+        <div id="menu">
+            <h1>Our Other Breakfast Item</h1>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="">Soups</a></li>
+                    <li><a href="">Wrops</a></li>
+                    <li><a href="">Sandwices</a></li>
+                    <li><a href="">Smoothie & Frappes</a></li>
+                    <li><a href="">Doughtnuts & Pastries</a></li>
+                    <li><a href="">Cookies</a></li>
+                    <li><a href="">Coffee Tea & Chol</a></li>
+                </ul>
+            </div>
+            <div class="card-menu">
+                <button><-</button>
+
+                        <div class="card">
+                            <img src="assets/images/Free_Banh_MI_Vietnamese_sandwich_png__Savor_Flavor__Mouthwatering_Fillings-removebg-preview.png" alt="">
+
+                            <div class="description">
+                                <h4>Veggie Italian</h4>
+                                <p>The coffee is brewed by first roasting the green coffee beans.</p>
+                                <div class="price">
+                                    <span>$25</span>
+                                    <button>Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/Burger_And_Sandwich_PNG_-_Free_Download-removebg-preview.png" alt="">
+                            
+                            <div class="description">
+                                <h4>Chipotle Chicken Avocado</h4>
+                                <p>The coffee is brewed by first roasting the green coffee beans.</p>
+                                <div class="price">
+                                    <span>$30</span>
+                                    <button>Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/sandwich_transparent_png__fresh_deli_sandwich__flavorful_filling-removebg-preview.png" alt="">
+
+                            <div class="description">
+                                <h4>Blt Sandwich</h4>
+                                <p>The coffee is brewed by first roasting the green coffee beans.</p>
+                                <div class="price">
+                                    <span>$35</span>
+                                    <button>Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button>-></button>
+            </div>
+        </div>
+
+        <div id="news">
+            <div>
+                <img src="assets/images/Free Vector _ Realistic coffee background (1).jpeg" alt="">
+                <div>
+                    <h1>Subscribe To Get News</h1>
+                    <div>
+                        <input type="email" name="email" id="email" value="Enter Your Email">
+                    <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <div>
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="">
+                    <p>MoonCoffee</p>
+                </div>
+                <div>
+                    <p>The managing director & cluster head in Indonesia at Bekasi</p>
+                </div>
+            </div>
+            <div class="contact">
+                <h4>Contact Us</h4>
+                <p>Address: 8908 Bekasi Jawa Breakfast</p>
+                <p>Phone Number: (+62) 8784658838</p>
+                <p>Email: MoonCoffee@gmail.com</p>
+            </div>
+            <div class="viewer-guides">
+                <h4>Viever Guides</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#coffee">Coffee</a>
+                <a href="">Help & Support</a>
+            </div>
+            <div class="Recent-news">
+                <h4>Recent News</h4>
+                <img src="" alt="">
+                <span>Best smell of Americano coffee</span>
+                <img src="" alt="">
+                <span>Best smell of Americano coffee</span>
+            </div>
+        </div>
+        <p>Tugas PWD P2</p>
+    </footer>
+</body>
+
+</html>
