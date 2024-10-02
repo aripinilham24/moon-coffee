@@ -382,9 +382,10 @@
             background-image: url(assets/images/download\ \(3\).jpeg);
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: 10% 90%;
         }
         footer>div, footer>p {
-            background-color: #1b1b1d96;
+            background-color: #1b1b1db7;
             color: #ECDFCC;
         }
 
@@ -399,7 +400,7 @@
             align-items: center;
             font-size: 15px;
             font-weight: 600;
-            height: 100px;
+            height: 90px;
             width: 50px;
         }
         footer .logo img{
@@ -413,18 +414,23 @@
             padding: 0;
         }
 
+        .logo span {
+            color: #FF6600;
+        }
+
         footer>div {
             padding: 50px;
             display: flex;
             align-items: flex-start;
-            justify-content:space-evenly;
+            justify-content:space-between;
             border-bottom: 2px solid #968f84;
             
         }
 
         footer>div>div {
-            width: 200px;
-            height: 120px;
+            width: 400px;
+            height: 200px;
+            margin: 0;
         }
 
         .viewer-guides{
@@ -434,6 +440,35 @@
         .viewer-guides a{
             text-decoration: none;
             color: #ECDFCC;
+            margin: 5px;
+        }
+
+        .recent-news {
+            display:block;
+            
+        }
+
+        .recent-news a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color:#ECDFCC;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .recent-news a:hover {
+            background-color: #ecdfcc2d;
+            border-radius: 5px;
+        }
+        
+        .recent-news a img {
+            border-radius: 5px;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+
         }
     </style>
 </head>
@@ -444,7 +479,7 @@
             <div class="logo">
                 <a href="#home">
                     <img src="assets/images/logo.png" alt="logo">
-                    <p>MoonCoffee</p>
+                    <p>Moon<span>Coffee</span></p>
                 </a>
             </div>
             <ul>
@@ -633,7 +668,7 @@
             <div>
                 <div class="logo">
                     <img src="assets/images/logo.png" alt="">
-                    <p>MoonCoffee</p>
+                    <p>Moon<span>Coffee</span></p>
                 </div>
                 <div>
                     <p>The managing director & cluster head in Indonesia at Bekasi</p>
@@ -652,12 +687,15 @@
                 <a href="#coffee">Coffee</a>
                 <a href="">Help & Support</a>
             </div>
-            <div class="Recent-news">
+            <div class="recent-news">
                 <h4>Recent News</h4>
-                <img src="" alt="">
-                <span>Best smell of Americano coffee</span>
-                <img src="" alt="">
-                <span>Best smell of Americano coffee</span>
+                <a href="">
+                    <img src="assets/images/93032c0d-b9bb-4dad-8cf7-75953886114e.jpeg" alt="news">
+                    <span>Best smell of Americano coffee</span></a>
+                <a href="">
+                    <img src="assets/images/Coffee ☕.jpeg" alt="news">
+                    <span>Best smell of Americano coffee</span>
+                </a>
             </div>
         </div>
         <p>Tugas PWD P2</p>
