@@ -49,6 +49,13 @@
             padding: 20px 0;
         }
 
+        nav .logo, nav .cart {
+            width: 235px;
+        }
+
+        nav .cart {
+            text-align: end;
+        }
 
         .logo a {
             display: flex;
@@ -423,7 +430,7 @@
         }
 
         footer>div {
-            padding: 50px;
+            padding: 50px 50px 10px;
             display: flex;
             align-items: flex-start;
             justify-content:space-between;
@@ -435,6 +442,8 @@
             width: 400px;
             height: 200px;
             margin: 0;
+            display: flex;
+            flex-direction: column;
         }
 
         .viewer-guides{
@@ -445,6 +454,7 @@
             text-decoration: none;
             color: #ECDFCC;
             margin-left: 5px;
+            width: max-content;
         }
 
         .viewer-guides a:hover {
@@ -498,6 +508,7 @@
                 <li><a href="#coffee">Coffee</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="cart"><a href="">Cart <span>0</span></a></div>
         </nav>
@@ -684,9 +695,9 @@
                     <p>The managing director & cluster head in Indonesia at Bekasi</p>
                 </div>
             </div>
-            <div class="contact">
+            <div id="contact" class="contact">
                 <h4>Contact Us</h4>
-                <p>Address: 8908 Bekasi Jawa Breakfast</p>
+                <p>Address: 8908 Bekasi Jawa Barat</p>
                 <p>Phone Number: (+62) 8784658838</p>
                 <p>Email: MoonCoffee@gmail.com</p>
             </div>
