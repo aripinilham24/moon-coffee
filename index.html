@@ -17,6 +17,7 @@
         html {
             padding: 0;
             margin: 0;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -89,12 +90,13 @@
         nav ul li a {
             border-radius: 5px;
             padding: 10px;
+            border: 1px solid transparent;
         }
 
         nav ul li a:hover {
             background-color: #ECDFCC;
             color: #FF6600;
-            transition: 300ms ease-in-out;
+            transition: 200ms ease-in-out;            
         }
 
         main {
@@ -137,8 +139,17 @@
             font-size: 15px;
             font-weight: 600;
             padding: 20px;
+            border: 1px solid transparent;
         }
 
+
+        #home button:hover, #about button:hover {
+            background-color: #ECDFCC;
+            color: #FF6600;
+            border: 1px solid #FF6600;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+        }
         #about {
             background-color: #1b1b1dfa;
             color: #ECDFCC;
@@ -247,6 +258,7 @@
             width: 30px;
             color: #FF6600;
             font-weight: 600;
+            cursor: pointer;
         }
 
         .card-coffee .description p, .card-menu .description p{
@@ -262,14 +274,22 @@
             justify-content: space-between;
         }
 
-        .card-coffee .description .price button, .card-menu .description .price button {
+        .price button {
             background-color: #FF6600;
             color: #ECDFCC;
-            border: transparent;
+            border:1px solid transparent;
             border-radius: 10px;
             font-size: 15px;
             font-weight: 600;
             padding: 15px;
+        }
+
+        .price button:hover {
+            background-color: #ECDFCC;
+            color: #FF6600;
+            border: 1px solid #FF6600;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
         }
 
         .nav-menu {
@@ -355,6 +375,7 @@
             border-left: none;
             position: absolute;
             right: 10px;
+            cursor: pointer;
         }
 
         footer {
@@ -599,7 +620,7 @@
                 <div>
                     <h1>Subscribe To Get News</h1>
                     <div>
-                        <input type="email" name="email" id="email" value="Enter Your Email">
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email">
                     <button>Subscribe</button>
                     </div>
                 </div>
