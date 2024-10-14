@@ -25,6 +25,74 @@
             border-bottom: 2px solid #d7d8daf1;
         }
 
+        nav a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar-collapse {
+            justify-content: space-between;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #ECDFCC;
+            border-radius: 5px;
+            width: max-content;
+            padding: 5px;
+        }
+
+        .nav-link:hover {
+            color: #FF6600;
+            background-color: #ECDFCC;
+        }
+
+        .navbar-brand:hover {
+            color: #ECDFCC;
+        }
+
+        nav img {
+            width: 100px;
+            height: 50px;
+            object-fit: cover;
+            margin: 0;
+        }
+
+        nav span {
+            color: #FF6600;
+        }
+
+        .cart {
+            font-size: 30px;
+            justify-self: end;
+        }
+
+        .cart a {
+            text-decoration: none;
+            color: #FF6600;
+            width: max-content;
+        }
+
+        .cart span {
+            font-size: 10px;
+            background-color: #ECDFCC;
+            border-radius: 10px;
+            width: 15px;
+            text-align: center;
+            position: relative;
+            top: -12px;
+            right: 8px;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        /* 
         nav {
             display: flex;
             align-items: center;
@@ -105,7 +173,7 @@
             background-color: #ECDFCC;
             color: #FF6600;
             transition: 200ms ease-in-out;
-        }
+        } */
 
         main {
             display: flex;
@@ -169,6 +237,7 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+            flex-wrap: wrap;
         }
 
         #about .badges img {
@@ -187,6 +256,7 @@
         h4,
         h4~p {
             margin: 5px;
+            font-size: 20px;
         }
 
         .badges div>p {
@@ -508,6 +578,7 @@
             font-size: 30px;
             z-index: 1;
         }
+
         .swiper-navigation div[class^='swiper-button'] {
             font-size: 20px;
             color: #FF6600;
@@ -524,6 +595,161 @@
         .swiper-pagination-bullet {
             background: #FF6600;
         }
+
         .swiper-pagination-bullet-active {
             background: #FF6600;
+        }
+
+        /* media screen */
+        @media screen and (max-width: 599px) {
+            #home {
+                flex-direction: column-reverse;
+                justify-content: center;
+                height: max-content;
+            }
+
+            .pic-coffee img {
+                width: 300px;
+            }
+
+            #home .pic-coffee {
+                width: max-content;
+                filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+            }
+
+            #about {
+                padding: 10px;
+            }
+
+
+            #about .badges div {
+                width: 150px;
+            }
+
+            .content-about {
+                flex-direction: column;
+                padding: 0;
+                margin: 40px 10px 10px;
+            }
+
+            .content-about div>img {
+                width: 300px;
+                height: 200px;
+            }
+
+            h4, h4~p {
+                margin: 5px;
+                font-size: 15px;
+            }
+            #about button {
+                margin: 0;
+            }
+            .content-about .description {
+                margin-top: 20px;
+                width: 300px;
+            }
+        }
+
+        @media screen and (min-width: 600px) and (max-width: 1023px) {
+            header {
+                padding: 0 15px;
+            }
+
+            nav img {
+                width: 90px;
+                height: 45px;
+            }
+
+            #home .home-text h1 {
+                font-size: 50px;
+            }
+
+            #home .pic-coffee {
+                width: 80%;
+            }
+
+            .content-about {
+                flex-direction: row;
+                margin: 50px;
+            }
+
+            .content-about .description,
+            .content-about div>img {
+                width: 100%;
+            }
+
+            .card {
+                height: 450px;
+                width: 100%;
+            }
+
+            .swiper {
+                width: 90%;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            header {
+                padding: 0 20px;
+            }
+
+            nav img {
+                width: 100px;
+                height: 50px;
+            }
+
+            #home .home-text h1 {
+                font-size: 60px;
+            }
+
+            #home .pic-coffee {
+                width: 30em;
+            }
+
+            .content-about {
+                flex-direction: row;
+                margin: 80px;
+            }
+
+            .content-about .description,
+            .content-about div>img {
+                width: 500px;
+            }
+
+            .card {
+                height: 500px;
+                width: 300px;
+            }
+
+            .swiper {
+                width: calc(100% - 20%);
+                height: calc(100vh - 4rem);
+            }
+        }
+
+        @media screen and (min-width: 1400px) {
+            header {
+                padding: 0 40px;
+            }
+
+            #home .home-text h1 {
+                font-size: 70px;
+            }
+
+            #home .pic-coffee {
+                width: 35em;
+            }
+
+            .content-about {
+                margin: 100px;
+            }
+
+            .card {
+                width: 350px;
+                height: 600px;
+            }
+
+            .swiper {
+                width: 80%;
+            }
         }

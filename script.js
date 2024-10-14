@@ -18,9 +18,15 @@ const swiper = new Swiper('.swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
+    breakpoints: {
+        300: {
+            slidesPerView: 1,
+        },
+        600: {
+            slidesPerView: 2,
+        },
+        1000: {
+            slidesPerView: 3,
+        }
+    }
 });
