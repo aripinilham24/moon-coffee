@@ -394,8 +394,6 @@
 
         #news div img {
             border-radius: 10px;
-            width: 1020px;
-            height: 500px;
             object-fit: cover;
             object-position: 100% 90%;
         }
