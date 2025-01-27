@@ -1,24 +1,51 @@
+:root {
+    --color-primary: orangered;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/background\ coffee.png);
+}
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
 @media (max-width: 576px) {
     .cart .bi {
-      font-size: 2rem;
+        font-size: 2rem;
     }
+
     .cart {
         width: 10%;
     }
-  }
+}
+
 .cart span {
     height: 20px;
     width: 20px;
 }
 
 .nav-item:hover {
-    background-color: #fd7e14;
+    background-color: var(--color-primary);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+[class*="-orange"] {
+    color: var(--color-primary);
+}
+
+
+
+#home {
+    background-color: #d7d8daf1;
+}
+
+.order {
+    background-color: var(--color-primary);
+    color: white;
 }
