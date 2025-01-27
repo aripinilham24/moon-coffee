@@ -45,6 +45,15 @@ body {
     background-color: #d7d8daf1;
 }
 
+#home .pict -coffee {
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+#about {
+    background-color: #1b1b1dfa;
+
+}
+
 .order {
     background-color: var(--color-primary);
     color: white;
