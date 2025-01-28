@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="assets/style.css">
     </head>
 <body>
-    <header class="">
+    <header class="position-sticky top-0 border-bottom border-secondary">
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
                 <a href="#" class="navbar-brand">
@@ -41,10 +41,10 @@
 
     <main>
         <section id="home" class="d-flex flex-column-reverse flex-md-row p-2">
-            <div class="col-md-6 p-md-5">
-                <p class="display-1">Good Coffe Will Always Find the Audience</p>
-                <p class="display-6">We Provide Variety of Unique and Best Coffees</p>
-                <a href="#" class="order btn rounded p-3 border-danger">Order Now</a>
+            <div class="col-md-6 p-md-5 d-flex flex-column justify-content-center p-5">
+                <h1 class="display-5">Good Coffe Will Always Find the Audience</h1>
+                <p class="">We Provide Variety of Unique and Best Coffees</p>
+                <a href="#" class="order btn rounded p-3 border-danger w-50">Order Now</a>
             </div>
             <div class="">
                 <img src="assets/images/secangkir kopi.png" alt="coffee" class="img-fluid pict-coffee">
@@ -52,30 +52,45 @@
         </section>
 
         <section id="about">
-            <div class="badges d-flex text-light container p-2">
-                <div class="col-3">
-                    <img class="bg-secondary rounded img-fluid" width="15%" height="15%" src="https://img.icons8.com/hatch/64/FFFFFF/espresso-cup.png"
+            <div class="badges d-flex flex-wrap text-light container p-2 mb-4">
+                <div class="col-6 p-3 col-md-3">
+                    <img class="bg-secondary rounded mb-2 p-2 img-fluid" width="50px" height="50px" src="https://img.icons8.com/hatch/64/FFFFFF/espresso-cup.png"
                         alt="espresso-cup" />
                     <h4>AWESOME AROMA</h4>
                     <P>The coffee is brewed by first roasting the green coffee beans</P>
                 </div>
-                <div class="col-3">
-                    <img class="bg-secondary rounded img-fluid" width="15%" height="15%" src="https://img.icons8.com/dotty/80/FFFFFF/guarantee.png"
+                <div class="col-6 p-3 col-md-3">
+                    <img class="bg-secondary rounded mb-2 p-2 img-fluid" width="50px" height="50px" src="https://img.icons8.com/dotty/80/FFFFFF/guarantee.png"
                         alt="guarantee" />
                     <h4>HIGHT QUALITY</h4>
                     <P>The coffee is brewed by first roasting the green coffee beans</P>
                 </div>
-                <div class="col-3">
-                    <img class="bg-secondary rounded img-fluid" width="15%" height="15%" src="https://img.icons8.com/ios/50/FFFFFF/coffee-beans-.png"
+                <div class="col-6 p-3 col-md-3">
+                    <img class="bg-secondary rounded mb-2 p-2 img-fluid" width="50px" height="50px" src="https://img.icons8.com/ios/50/FFFFFF/coffee-beans-.png"
                         alt="coffee-beans-" />
                     <h4>PURE GRADES</h4>
                     <P>The coffee is brewed by first roasting the green coffee beans</P>
                 </div>
-                <div class="col-3">
-                    <img class="bg-secondary rounded img-fluid" width="15%" height="15%" src="https://img.icons8.com/ios/50/FFFFFF/coffee-bag.png"
+                <div class="col-6 p-3 col-md-3">
+                    <img class="bg-secondary rounded mb-2 p-2 img-fluid" width="50px" height="50px" src="https://img.icons8.com/ios/50/FFFFFF/coffee-bag.png"
                         alt="coffee-bag" />
                     <h4>PROPER ROASTING</h4>
                     <P>The coffee is brewed by first roasting the green coffee beans</P>
+                </div>
+            </div>
+
+            <div class="text-light d-md-flex flex-wrap container h-100 align-items-center justify-content-center">
+                <div class="m-3 d-flex justify-content-center">
+                    <img src="https://i.pinimg.com/564x/38/25/0e/38250e1d24fb3813c0c0a85e766135c3.jpg" alt="" class="rounded object-fit-cover coffee3" height="400px" width="500px">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <h1>Best Coffee House In Your Home Town</h1>
+                    <p class="m-0">Our incredibly rate come from humble beginnings in yemen, where decades of political turmoil once
+                        forced local farmers to start growing khat, a narcotic native tothe Arabian peninsula.
+                    </p>
+                    <p>The Dawoodi Bohara Community change this, removing all the khat plants and replacing them with
+                        coffee, bringing this humble brew black to its roots.</p>
+                    <button class="btn text-light border border-danger order">Read More</button>
                 </div>
             </div>
         </section>

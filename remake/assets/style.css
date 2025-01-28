@@ -1,7 +1,6 @@
 :root {
     --color-primary: orangered;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url(images/background\ coffee.png);
@@ -11,13 +10,21 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
     .cart .bi {
         font-size: 2rem;
     }
 
     .cart {
-        width: 10%;
+        width: max-content;
+    }
+}
+
+/* responsif image */
+@media  (max-width: 576px) {
+    #about .coffee3 {
+        width: 300px;
+        height: 200px;
     }
 }
 
@@ -45,6 +52,8 @@ body {
     background-color: #d7d8daf1;
 }
 
+
+
 #home .pict -coffee {
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
 }
@@ -58,3 +67,12 @@ body {
     background-color: var(--color-primary);
     color: white;
 }
+
+/* .badges h4 {
+    font-size: 1em;
+    margin: 0 ;
+}
+.badges p {
+    font-size: 1em;
+    margin: 0;
+} */
