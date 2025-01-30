@@ -58,7 +58,7 @@ body {
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
 }
 
-#about {
+main {
     background-color: #1b1b1dfa;
 
 }
