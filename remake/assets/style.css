@@ -42,19 +42,15 @@ body {
     -o-border-radius: 10px;
 }
 
-[class*="-orange"] {
+[class*="orange"] {
     color: var(--color-primary);
 }
-
-
 
 #home {
     background-color: #d7d8daf1;
 }
 
-
-
-#home .pict -coffee {
+#home .pict-coffee, .menu {
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
 }
 
@@ -66,6 +62,10 @@ main {
 .order {
     background-color: var(--color-primary);
     color: white;
+}
+
+[class^='swiper-button']::after {
+    display: none;
 }
 
 /* .badges h4 {
