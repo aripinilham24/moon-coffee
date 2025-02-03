@@ -4,7 +4,7 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     slidesPerView: 3,
     direction: "horizontal",
-    mousewheel: false,
+    mousewheel: true,
     keyboard: {
         enabled: true
     },

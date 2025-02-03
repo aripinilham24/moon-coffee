@@ -68,6 +68,10 @@ main {
     display: none;
 }
 
+[class^='swiper-button'] {
+    z-index: 0;
+}
+
 /* .badges h4 {
     font-size: 1em;
     margin: 0 ;
